@@ -1,0 +1,7 @@
+#
+
+https://www.golinuxcloud.com/tutorial-encrypt-decrypt-sign-file-gpg-key-linux/
+
+#https://unix.stackexchange.com/questions/516967/how-to-encrypt-file-with-gpg-and-a-passphrase-only
+passphrase=$(head -n 1 /var/secret.key)
+gpg --symmetric --batch --yes --passphrase $passphrase --output some.gpg  toEncrypt.txt
